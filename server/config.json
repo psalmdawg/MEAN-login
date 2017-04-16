@@ -1,0 +1,5 @@
+{
+    "connectionString": "mongodb://localhost:27017/mean-login-demo",
+    "apiUrl": "http://localhost:3000",
+    "secret": "this is a secret string"
+}

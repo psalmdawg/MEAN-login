@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="col-md-4 col-md-offset-4">
+  <h4>Register</h4>
+
+  <form novalidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="userData" ngModelGroup="userData" #userData="ngModelGroup">
+
+      <div class="form-group">
+        <label for="">Username</label>
+        <input type="text"class="form-control" ngModel  name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="">First Name</label>
+        <input type="text"  class="form-control"  ngModel name="firstName">
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text"  class="form-control"  ngModel name="lastName">
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text"  class="form-control"  ngModel name="email" required email #email="ngModel">
+          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
+      </div>
+
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password"  class="form-control"  ngModel name="password" required>
+      </div>
+        <!-- <pre>Dirty? {{ signUpForm.controls.email.dirty}}</pre>
+        <pre>Pristine? {{ signUpForm.controls.email.pristine}}</pre>
+        <pre>Touch? {{ signUpForm.controls.email.touched}}</pre>
+        <pre>Untouched? {{ signUpForm.controls.email.untouched}}</pre> -->
+        <!-- <pre>Valid? {{ email.valid}}</pre>
+        <pre>Invalid? {{ email.invalid}}</pre> -->
+        <!-- <p *ngIf="!userData.valid && userData.touched">All details required</p> -->
+        <button class="btn btn-primary" [disabled]="!f.valid" type="submit">Submit</button>
+      </div>
+    </form>
+    <!-- <pre>{{ signUpForm.value | json}}</pre> -->
+    <br>
+    <p><a [routerLink]="['/login']">Login</a></p>
+  </div>
+</div>

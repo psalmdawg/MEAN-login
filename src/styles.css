@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+/*.smile{
+  background-image:url('./assets/smile.svg');
+  width: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}*/
+
+.page-size{
+  min-height: 90vh;
+  width: 100%;
+
+}
+
+a{
+  cursor: pointer;
+}
+
+.login-image{
+  height: 40px;
+  /*border-radius: 50%;*/
+
+}
